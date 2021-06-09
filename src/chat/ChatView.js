@@ -57,7 +57,7 @@ const ChatView = () => {
 
   useEffect(() => {
     if (room) {
-      fetch(`serverUrlchat?convId=${room}`)
+      fetch(`${serverUrl}/chat?convId=${room}`)
         .then((res) => res.json())
         .then((response) => {
           setMessages(response);
